@@ -14,7 +14,6 @@ Handlebars.registerHelper("i18n", function () {
 
 var languages = {
     en: "English",
-    "zh-CN": "简体中文",
     de: "Deutsch",
     es: "Español",
     fr: "Français",
@@ -22,6 +21,7 @@ var languages = {
     ua: "Українська",
     cz: "Čeština",
     kr: "한국어",
+    "zh-CN": "简体中文",
 };
 
 $(document).ready(function () {
@@ -83,6 +83,7 @@ function selectLanguage(lang) {
 }
 
 function updateLabels(lang) {
+    document.title = jQuery.i18n.prop("app.title") ?? 'Fantasy Realms: App of Scoring';
     $("#clear").html(jQuery.i18n.prop("button.reset"));
     $("#lbl_ch_items").html(jQuery.i18n.prop("label.cursed-hoard.items"));
     $("#lbl_ch_suits").html(jQuery.i18n.prop("label.cursed-hoard.suits"));

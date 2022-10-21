@@ -407,3 +407,8 @@ button {
 #cards div.suit-selection {
   background-color: #aed77b;
 }
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
